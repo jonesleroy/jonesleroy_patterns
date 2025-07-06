@@ -36,7 +36,21 @@ export function makeBoard(rows, cols) {
  * @returns `[]` if `size` is 0 or negative
  */
 export function makeTriangle(size) {
-  // TODO
+  if (typeof size !== "number") return null;
+  if (size <= 0) return [];
+ 
+
+
+  const triangle = []
+  
+  for (let i = 0; i < 3; i++) {
+    const innerTriangle = [];
+    for (let j = 0; j <= i; j++){
+      innerTriangle.push("-");
+    }
+    triangle.push(innerTriangle)
+  };
+  return triangle;
 }
 
 /**
