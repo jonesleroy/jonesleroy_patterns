@@ -43,7 +43,7 @@ export function makeTriangle(size) {
 
   const triangle = []
   
-  for (let i = 0; i < 3; i++) {
+  for (let i = 0; i < size; i++) {
     const innerTriangle = [];
     for (let j = 0; j <= i; j++){
       innerTriangle.push("-");
@@ -60,5 +60,7 @@ export function makeTriangle(size) {
  * @returns `0` if `letter is not a string
  */
 export function countLetter(words, letter) {
-  // TODO
+  if (typeof words !== "word" || typeof letter !== "letter") return 0;
+
+  
 }
